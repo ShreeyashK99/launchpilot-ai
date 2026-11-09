@@ -1,57 +1,59 @@
 "use client";
 
-import { useState } from "react";
-import { Check, Zap, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Code2, Cpu, ShieldCheck } from "lucide-react";
 
 export function Pricing() {
-  const [annual, setAnnual] = useState(true);
-
-  const plans = [
+  const tiers = [
     {
-      id: "starter",
-      name: "Solopreneur Founder",
-      monthlyPrice: 29,
-      annualPrice: 23,
-      desc: "Perfect for indie hackers building their first AI SaaS MVP.",
+      id: "community",
+      name: "Community & Self-Hosted",
+      price: "$0",
+      period: "Free Forever",
+      desc: "100% open source developer engine. Run locally or deploy to your own Vercel / Cloudflare edge.",
       features: [
-        "Up to 5 Synthesized Apps / mo",
-        "Next.js 15 App Router Export",
-        "Stripe Checkout & Webhooks",
-        "Supabase DB Migrations",
-        "Community Support",
+        "Full Next.js 15 App Router Code Export",
+        "Autonomous Semantic Synthesis Engine",
+        "Supabase PostgreSQL Migrations with RLS",
+        "Zero-Cost Local Execution (₹0 / $0)",
+        "MIT Open Source License",
       ],
+      cta: "Clone on GitHub",
+      link: "https://github.com/ShreeyashK99/launchpilot-ai",
       popular: false,
     },
     {
       id: "pro",
-      name: "Pro Launchpad",
-      monthlyPrice: 79,
-      annualPrice: 63,
-      desc: "Built for serial founders and agencies shipping client products fast.",
+      name: "Developer Inference Mode",
+      price: "BYO Key",
+      period: "Pay-As-You-Go",
+      desc: "Connect your OpenCode, OpenAI, or Claude 3.5 Sonnet API key for bespoke live frontier generation.",
       features: [
-        "Unlimited Synthesized SaaS Apps",
-        "Pinecone Vector DB RAG Search",
-        "Claude 3.5 & GPT-4o Agent Tuning",
-        "1-Click Cloudflare & Vercel Deploy",
-        "100% Code IP Ownership Transfer",
-        "Priority Developer Support SLA",
+        "Frontier LLM Inference via OpenCode Gateway",
+        "Claude 3.5 Sonnet & GPT-4o Support",
+        "Streaming Server-Sent Events (SSE)",
+        "Zod Schema Runtime Validation",
+        "Dynamic Domain Classification",
+        "Instant Codebase Copy & Export",
       ],
+      cta: "Configure in .env.local",
+      link: "#playground",
       popular: true,
     },
     {
       id: "enterprise",
-      name: "Agency & Enterprise",
-      monthlyPrice: 199,
-      annualPrice: 159,
-      desc: "Custom AI engine tuning, dedicated SLA, and white-label exports.",
+      name: "Enterprise Architecture",
+      price: "Custom",
+      period: "Tailored Specs",
+      desc: "Custom multi-tenant cluster architectures, dedicated compliance templates (HIPAA/GDPR), and bespoke agent loops.",
       features: [
-        "Custom AST Code Templates",
-        "Dedicated Multi-Tenant Clusters",
-        "White-Label SaaS Export Engine",
-        "Custom SSO & SAML Authentication",
-        "Dedicated Solutions Engineer",
-        "Custom SLA & Uptime Guarantee",
+        "Custom Multi-Tenant Cluster Blueprints",
+        "HIPAA & GDPR Compliance Schemas",
+        "LangGraph Multi-Agent Orchestration",
+        "Dedicated Database Index Optimization",
+        "Direct Architectural Consultation",
       ],
+      cta: "Contact via Portfolio",
+      link: "https://shreeyash-kudalkar-portfolio.pages.dev/",
       popular: false,
     },
   ];
@@ -61,104 +63,74 @@ export function Pricing() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-mono text-xs font-bold border border-emerald-200">
-            <Zap className="w-4 h-4 text-emerald-700" />
-            <span>Simple, Transparent Pricing</span>
+            <span>Flexible Deployment Options 🚀</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-stone-900">
-            Choose Your <span className="text-emerald-700">SaaS Growth Plan 🚀</span>
+            Transparent, <span className="text-emerald-700">Developer-First Tiers</span>
           </h2>
-          <p className="text-stone-600 text-base font-medium">
-            Zero hidden fees. Full source code ownership on every tier.
+          <p className="text-stone-600 text-sm sm:text-base font-medium max-w-xl mx-auto">
+            From free local self-hosting to frontier cloud inference with your own API keys.
           </p>
-
-          {/* Monthly / Annual Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 pt-4">
-            <span className={`text-xs font-mono font-bold ${!annual ? "text-stone-900" : "text-stone-500"}`}>
-              Monthly Billing
-            </span>
-            <button
-              onClick={() => setAnnual(!annual)}
-              className="relative w-14 h-7 rounded-full bg-stone-200 p-1 transition-colors border border-stone-300"
-            >
-              <div
-                className={`w-5 h-5 rounded-full bg-emerald-700 transition-transform ${
-                  annual ? "translate-x-7" : "translate-x-0"
-                }`}
-              />
-            </button>
-            <span className={`text-xs font-mono font-bold flex items-center gap-1.5 ${annual ? "text-stone-900" : "text-stone-500"}`}>
-              Annual Billing
-              <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold border border-amber-200">
-                Save 20% 🎉
-              </span>
-            </span>
-          </div>
         </div>
 
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {plans.map((p) => {
-            const price = annual ? p.annualPrice : p.monthlyPrice;
-            return (
-              <div
-                key={p.id}
-                className={`relative flex flex-col justify-between p-8 rounded-3xl bg-white border transition shadow-md ${
-                  p.popular
-                    ? "border-emerald-700 ring-2 ring-emerald-700/20 scale-105"
-                    : "border-stone-200 hover:border-stone-300"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {tiers.map((t) => (
+            <div
+              key={t.id}
+              className={`p-8 rounded-3xl bg-white border flex flex-col justify-between space-y-8 soft-card relative ${
+                t.popular
+                  ? "border-emerald-600 shadow-xl ring-2 ring-emerald-600/20"
+                  : "border-stone-200 shadow-sm"
+              }`}
+            >
+              {t.popular && (
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-emerald-700 text-white font-mono text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                  Recommended Mode
+                </div>
+              )}
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-heading font-extrabold text-stone-900">
+                    {t.name}
+                  </h3>
+                  <p className="text-xs text-stone-600 mt-2 font-medium leading-relaxed">
+                    {t.desc}
+                  </p>
+                </div>
+
+                <div className="flex items-baseline gap-2 pt-2 border-t border-stone-100">
+                  <span className="text-3xl sm:text-4xl font-heading font-extrabold text-stone-900 font-mono">
+                    {t.price}
+                  </span>
+                  <span className="text-xs text-stone-500 font-mono font-medium">
+                    / {t.period}
+                  </span>
+                </div>
+
+                <ul className="space-y-3 text-xs text-stone-700 font-medium">
+                  {t.features.map((feat, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={t.link}
+                className={`w-full py-3.5 px-4 rounded-2xl font-bold text-xs font-mono transition text-center flex items-center justify-center gap-2 ${
+                  t.popular
+                    ? "bg-emerald-700 hover:bg-emerald-800 text-white shadow-md shadow-emerald-700/20"
+                    : "bg-stone-100 hover:bg-stone-200 text-stone-800"
                 }`}
               >
-                {p.popular && (
-                  <div className="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-emerald-700 text-white font-mono text-[10px] font-bold uppercase tracking-wider shadow-sm">
-                    Most Popular Choice
-                  </div>
-                )}
-
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-heading font-extrabold text-stone-900">
-                      {p.name}
-                    </h3>
-                    <p className="text-xs text-stone-500 font-medium">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-heading font-extrabold text-stone-900">
-                      ${price}
-                    </span>
-                    <span className="text-xs font-mono text-stone-500 font-bold">
-                      / month {annual && "(billed annually)"}
-                    </span>
-                  </div>
-
-                  <ul className="space-y-3 text-xs text-stone-700 font-medium pt-4 border-t border-stone-100">
-                    {p.features.map((f, i) => (
-                      <li key={i} className="flex items-center gap-2.5">
-                        <Check className="w-4 h-4 text-emerald-700 shrink-0" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="pt-8">
-                  <a
-                    href="#cta"
-                    className={`w-full py-3.5 rounded-2xl text-xs font-mono font-bold flex items-center justify-center gap-2 transition ${
-                      p.popular
-                        ? "bg-emerald-700 hover:bg-emerald-800 text-white shadow-md shadow-emerald-700/20"
-                        : "bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-200"
-                    }`}
-                  >
-                    <span>Start 14-Day Free Trial</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
+                <span>{t.cta}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

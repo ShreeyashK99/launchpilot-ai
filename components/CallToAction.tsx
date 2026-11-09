@@ -9,8 +9,8 @@ import { Send, CheckCircle2, Rocket } from "lucide-react";
 
 const ctaSchema = z.object({
   name: z.string().min(2, "Please enter your name."),
-  email: z.string().email("Please enter a valid work email."),
-  vision: z.string().min(6, "Please describe your product idea."),
+  email: z.string().email("Please enter a valid email."),
+  vision: z.string().min(6, "Please describe your product vision or inquiry."),
 });
 
 type CTAFormData = z.infer<typeof ctaSchema>;
@@ -39,7 +39,7 @@ export function CallToAction() {
           name: data.name,
           email: data.email,
           vision: data.vision,
-          _subject: `LaunchPilot AI Trial Request from ${data.name}`,
+          _subject: `LaunchPilot AI Inquiry from ${data.name}`,
         }),
       });
     } catch (err) {
@@ -66,10 +66,10 @@ export function CallToAction() {
 
           <div className="space-y-3">
             <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-stone-900">
-              Ready to Launch Your <span className="text-emerald-700">SaaS Idea? 🚀</span>
+              Let&apos;s Build Your <span className="text-emerald-700">Next Architecture</span>
             </h2>
             <p className="text-stone-600 text-sm sm:text-base max-w-xl mx-auto font-medium">
-              Get 14 days of unrestricted access to LaunchPilot AI. Synthesize production-ready applications in seconds.
+              Have a product concept you want to scaffold, or want to discuss full-stack engineering collaborations and trial sprints? Reach out directly.
             </p>
           </div>
 
@@ -77,10 +77,10 @@ export function CallToAction() {
             <div className="py-8 space-y-3 text-emerald-700 font-mono">
               <CheckCircle2 className="w-12 h-12 mx-auto" />
               <h3 className="text-xl font-heading font-extrabold text-stone-900">
-                Trial Access Granted! 🎉
+                Inquiry Received! 🎉
               </h3>
               <p className="text-xs text-stone-600">
-                Check your email inbox for your LaunchPilot API key and instant workspace invitation.
+                Thank you! Shreeyash will review your message and reply directly to your inbox.
               </p>
             </div>
           ) : (
@@ -101,7 +101,7 @@ export function CallToAction() {
                   <input
                     type="email"
                     {...register("email")}
-                    placeholder="Work Email..."
+                    placeholder="Your Email..."
                     className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 text-xs font-mono outline-none focus:border-emerald-700 transition"
                   />
                   {errors.email && (
@@ -111,11 +111,11 @@ export function CallToAction() {
               </div>
 
               <div>
-                <input
-                  type="text"
+                <textarea
                   {...register("vision")}
-                  placeholder="Describe your SaaS product vision (e.g. AI CRM with Stripe)..."
-                  className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 text-xs font-mono outline-none focus:border-emerald-700 transition"
+                  rows={3}
+                  placeholder="Describe your product architecture vision or trial sprint requirements..."
+                  className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 text-xs font-mono outline-none focus:border-emerald-700 transition resize-none"
                 />
                 {errors.vision && (
                   <span className="text-[10px] text-rose-500 font-mono">{errors.vision.message}</span>
@@ -125,16 +125,10 @@ export function CallToAction() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-sm shadow-md shadow-emerald-700/20 transition flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-2xl bg-emerald-700 hover:bg-emerald-800 disabled:opacity-50 text-white font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-md shadow-emerald-700/20 transition"
               >
-                {isSubmitting ? (
-                  <span>Generating Workspace... 🚀</span>
-                ) : (
-                  <>
-                    <span>Request Free 14-Day Pro Trial ⚡</span>
-                    <Send className="w-4 h-4" />
-                  </>
-                )}
+                <Send className="w-4 h-4" />
+                <span>{isSubmitting ? "Sending..." : "Submit Inquiry Directly"}</span>
               </button>
             </form>
           )}
