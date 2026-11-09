@@ -6,14 +6,9 @@ echo ===================================================
 echo.
 cd /d D:\launchpilot-ai
 
-echo Checking repository status...
-git status
+echo Pushing clean codebase to GitHub...
 echo.
-
-echo Pushing code to GitHub...
-echo (If this is your first push, make sure you created the repo at https://github.com/new?name=launchpilot-ai)
-echo.
-git push -u origin main
+git push -f origin main
 
 echo.
 if %ERRORLEVEL% EQU 0 (
@@ -23,9 +18,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ===================================================
 ) else (
     echo ===================================================
-    echo   PUSH FAILED:
-    echo   Make sure you created the repo on GitHub first!
-    echo   Click here: https://github.com/new?name=launchpilot-ai
+    echo   PUSH FAILED. Please check terminal output above.
     echo ===================================================
 )
 

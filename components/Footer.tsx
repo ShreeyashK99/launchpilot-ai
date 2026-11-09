@@ -29,7 +29,34 @@ export function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-stone-500">
           <div>
-            © {new Date().getFullYear()} LaunchPilot AI. All rights reserved.
+            © {new Date().getFullYear()} LaunchPilot AI. Engineered by{" "}
+            <a
+              href="https://shreeyash-kudalkar-portfolio.pages.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-700 font-bold hover:underline"
+            >
+              Shreeyash Kudalkar
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://shreeyash-kudalkar-portfolio.pages.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-700 transition font-medium"
+            >
+              Developer Portfolio
+            </a>
+            <span>•</span>
+            <a
+              href="https://github.com/ShreeyashK99/launchpilot-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-700 transition font-medium"
+            >
+              GitHub Source
+            </a>
           </div>
         </div>
       </div>

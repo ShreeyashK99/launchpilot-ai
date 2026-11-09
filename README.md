@@ -86,6 +86,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 **Shreeyash Kudalkar**  
 *AI & Full-Stack Systems Engineer*  
-- Portfolio: [Cloudflare Pages](https://shreeyash-portfolio.pages.dev)  
+- Portfolio: [Developer Portfolio](https://shreeyash-kudalkar-portfolio.pages.dev/)  
 - GitHub: [@ShreeyashK99](https://github.com/ShreeyashK99)  
 - LinkedIn: [linkedin.com/in/shreeyashkudalkar](https://linkedin.com)
