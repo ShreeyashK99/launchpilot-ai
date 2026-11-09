@@ -6,11 +6,20 @@
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)
 ![OpenCode](https://img.shields.io/badge/OpenCode_API-Unified_Inference-7952DE?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/Methodology-100%25_Vibe_Coding_%26_Agentic-FF5722?style=for-the-badge)
 
 **LaunchPilot AI** is an autonomous full-stack product engineering engine that turns high-level product specifications into production-ready Next.js 15 App Routes, typed Zod schemas, and relational Supabase PostgreSQL migrations with Row-Level Security (RLS) in seconds.
 
 🔗 **Live Production Demo**: [https://launchpilot-ai-chi.vercel.app/](https://launchpilot-ai-chi.vercel.app/)
 
+---
+
+## ⚡ Engineering Philosophy: 100% Vibe Coded & Agentic Development
+
+This project was built from the ground up embracing the modern **"Vibe Coding" and Autonomous Agentic Development** paradigm:
+- **Conductor Over Typist**: Rather than manually writing repetitive boilerplate syntax, the developer acts as a high-level system architect—directing autonomous AI agents, orchestrating state machines, and defining data schemas.
+- **Agentic Velocity**: Rapidly turning product visions into deployed, type-safe Next.js 15 and Supabase architectures in hours rather than weeks.
+- **Enterprise Verification**: Pairing high-speed AI code generation with rigorous automated testing (12/12 integration test suite), strict Zod schema validation, and Row-Level Security guardrails.
 
 ---
 
