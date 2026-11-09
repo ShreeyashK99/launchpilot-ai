@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #fcfbf9;
+  --text-color: #1c1917;
+  --card-bg: #ffffff;
+  --border-color: #e7e5e4;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Warm Emerald & Amber Terracotta Gradient */
+.text-gradient-earth {
+  background: linear-gradient(135deg, #059669 0%, #d97706 60%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.05);
+}
+
+.soft-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.soft-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px -4px rgba(5, 150, 105, 0.12);
+}
+
+/* Abstract Organic Warm Mesh Grid */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(217, 119, 6, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 150, 105, 0.06) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fcfbf9;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}

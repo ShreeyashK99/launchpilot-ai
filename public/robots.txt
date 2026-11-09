@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://launchpilot-ai-demo.pages.dev/sitemap.xml
