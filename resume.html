@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shreeyash Kudalkar - AI-Native & Vibe Coding Full-Stack Engineer</title>
+  <title>Shreeyash Pradeep Kudalkar - AI-Native Full-Stack & Automation Engineer</title>
   <style>
     :root {
       --primary: #0f172a;
@@ -13,7 +13,7 @@
       --text: #1e293b;
       --muted: #475569;
       --line: #cbd5e1;
-      --tag-bg: #f1f5f9;
+      --bg: #ffffff;
     }
     * {
       box-sizing: border-box;
@@ -24,31 +24,31 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
       background-color: #f1f5f9;
-      line-height: 1.42;
+      line-height: 1.45;
       font-size: 13px;
-      padding: 24px 12px;
+      padding: 24px 16px;
     }
     .page-container {
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      background: #ffffff;
-      padding: 36px 42px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      background: var(--bg);
+      padding: 38px 46px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
       border-radius: 8px;
       border: 1px solid var(--line);
     }
     header {
       border-bottom: 2.5px solid var(--primary);
-      padding-bottom: 12px;
-      margin-bottom: 14px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
     }
     .header-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
     }
     h1 {
       font-size: 26px;
@@ -57,30 +57,23 @@
       text-transform: uppercase;
       font-weight: 800;
     }
-    .title-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 2px;
-    }
-    .role-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--accent);
-    }
     .badge-vibe {
       display: inline-block;
       background: #fef2f2;
       color: #b91c1c;
       border: 1px solid #fecaca;
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 700;
-      padding: 2px 8px;
+      padding: 3px 9px;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+    .role-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 3px;
     }
     .contact-bar {
       display: flex;
@@ -99,28 +92,29 @@
       text-decoration: underline;
     }
     section {
-      margin-bottom: 13px;
-    }
-    section:last-of-type {
-      margin-bottom: 0;
+      margin-bottom: 16px;
+      break-inside: avoid-page;
+      page-break-inside: avoid;
     }
     h2 {
-      font-size: 12px;
+      font-size: 12.5px;
       text-transform: uppercase;
       letter-spacing: 1.2px;
       font-weight: 800;
       color: var(--primary);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 3px;
-      margin-bottom: 7px;
+      border-bottom: 1.5px solid var(--line);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
     }
     .summary-text {
       color: var(--text);
       font-size: 12.5px;
-      line-height: 1.48;
+      line-height: 1.52;
     }
     .item {
-      margin-bottom: 9px;
+      margin-bottom: 11px;
+      break-inside: avoid-page;
+      page-break-inside: avoid;
     }
     .item:last-child {
       margin-bottom: 0;
@@ -136,7 +130,7 @@
       color: var(--primary);
     }
     .item-meta {
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--muted);
       font-weight: 600;
       white-space: nowrap;
@@ -145,16 +139,16 @@
       font-size: 12px;
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     ul {
       margin-left: 18px;
       margin-top: 2px;
     }
     li {
-      margin-bottom: 2.5px;
+      margin-bottom: 3px;
       font-size: 12px;
-      line-height: 1.42;
+      line-height: 1.44;
       color: var(--text);
     }
     li strong {
@@ -162,10 +156,10 @@
     }
     .skills-grid {
       display: grid;
-      grid-template-columns: 145px 1fr;
-      row-gap: 4.5px;
+      grid-template-columns: 165px 1fr;
+      row-gap: 5px;
       font-size: 12px;
-      line-height: 1.4;
+      line-height: 1.42;
     }
     .skill-cat {
       font-weight: 700;
@@ -185,11 +179,21 @@
       text-decoration: none;
       font-weight: 600;
     }
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+    }
+    .lang-bar {
+      font-size: 12px;
+      color: var(--text);
+      margin-top: 2px;
+    }
 
-    /* Print Optimization for Single Full A4 / Letter Page */
+    /* Print Formatting */
     @page {
       size: A4 portrait;
-      margin: 10mm 12mm;
+      margin: 12mm 14mm;
     }
     @media print {
       body {
@@ -197,7 +201,7 @@
         padding: 0;
         margin: 0;
         font-size: 11.5px;
-        line-height: 1.36;
+        line-height: 1.38;
       }
       .page-container {
         border: none;
@@ -207,11 +211,11 @@
         width: 100%;
       }
       header {
-        margin-bottom: 10px;
-        padding-bottom: 8px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
       }
       h1 {
-        font-size: 23px;
+        font-size: 22px;
       }
       .role-title {
         font-size: 13px;
@@ -219,19 +223,19 @@
       .contact-bar {
         font-size: 10.5px;
         gap: 4px 10px;
-        margin-top: 5px;
+        margin-top: 6px;
       }
       section {
-        margin-bottom: 9px;
+        margin-bottom: 11px;
       }
       h2 {
         font-size: 11px;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
         padding-bottom: 2px;
       }
       .summary-text {
         font-size: 11px;
-        line-height: 1.38;
+        line-height: 1.4;
       }
       .item-header {
         font-size: 11.5px;
@@ -241,13 +245,16 @@
       }
       li {
         font-size: 11px;
-        margin-bottom: 1.5px;
-        line-height: 1.32;
+        margin-bottom: 2px;
+        line-height: 1.34;
       }
       .skills-grid {
-        grid-template-columns: 135px 1fr;
+        grid-template-columns: 150px 1fr;
         font-size: 10.8px;
-        row-gap: 3px;
+        row-gap: 3.5px;
+      }
+      .edu-grid {
+        gap: 8px 14px;
       }
       .no-print {
         display: none !important;
@@ -283,25 +290,24 @@
 
   <div class="page-container">
     <div class="print-banner no-print">
-      <span>📄 <strong>ATS Single-Page Resume</strong> (Full Page Layout • Engineered for International Visa Screening)</span>
+      <span>📄 <strong>Updated Master Resume</strong> (100% Complete Data • Work Experience • Projects • Education • Skills)</span>
       <button class="btn-print" onclick="window.print()">Print / Save as PDF (Ctrl + P)</button>
     </div>
 
     <header>
       <div class="header-top">
-        <h1>Shreeyash Kudalkar</h1>
-        <span class="badge-vibe">100% Vibe Coded & Agentic Velocity</span>
+        <h1>Shreeyash Pradeep Kudalkar</h1>
+        <span class="badge-vibe">AI-Native & Vibe Coding Velocity</span>
       </div>
-      <div class="title-banner">
-        <span class="role-title">AI-Native & Vibe Coding Full-Stack Engineer</span>
-      </div>
+      <div class="role-title">AI Web Developer, Full-Stack Engineer & Automation Specialist</div>
       <div class="contact-bar">
-        <span>📍 Mumbai, India (Global Relocation Ready)</span>
+        <span>📍 Bhayandar East, Thane / Mumbai, Maharashtra, India</span>
         <span>📞 +91 7715831281</span>
-        <span>✉️ <a href="mailto:shreeyashkudalkar4136@gmail.com">shreeyashkudalkar4136@gmail.com</a></span>
+        <span>✉️ <a href="mailto:shreeyashkudalkar7@gmail.com">shreeyashkudalkar7@gmail.com</a> / <a href="mailto:shreeyashkudalkar4136@gmail.com">shreeyashkudalkar4136@gmail.com</a></span>
         <span>🌐 <a href="https://shreeyash-kudalkar-portfolio.pages.dev/" target="_blank">Portfolio</a></span>
         <span>💻 <a href="https://github.com/ShreeyashK99" target="_blank">GitHub (@ShreeyashK99)</a></span>
-        <span>🚀 <a href="https://launchpilot-ai-chi.vercel.app/" target="_blank">Live Production App</a></span>
+        <span>🚀 <a href="https://launchpilot-ai-chi.vercel.app/" target="_blank">Live App</a></span>
+        <span>✈️ <strong>Open to Global Relocation & Visa Sponsorship</strong></span>
       </div>
     </header>
 
@@ -309,30 +315,35 @@
     <section>
       <h2>Professional Summary & Engineering Philosophy</h2>
       <p class="summary-text">
-        <strong>Pioneering the AI-Native / Vibe Coding development paradigm.</strong> Rather than typing repetitive boilerplate syntax line-by-line, I operate as an engineering conductor—orchestrating autonomous AI coding agents (Claude 3.5 Sonnet, Cursor, Antigravity) to rapidly synthesize, test, and ship full-stack applications at 5–10x traditional development velocity. Backed by formal mechanical engineering rigor, strict TypeScript typing, Zod schema validation, Supabase Row-Level Security (RLS), and automated integration test suites. B.E. graduate from the University of Mumbai (Anabin H+ accredited, Germany Chancenkarte & EU Blue Card eligible).
+        AI & Software Engineer with <strong>3+ years of cross-functional engineering experience</strong> spanning production engineering, full-stack development, and data analytics, specializing in <strong>Generative AI, Autonomous Agentic Workflows, and Data Science</strong>. Operates on the cutting-edge <strong>AI-Native / Vibe Coding</strong> paradigm—orchestrating autonomous AI coding agents (Claude 3.5 Sonnet, Cursor, Antigravity) to rapidly architect, test, and ship production web applications and automation systems at 5–10x traditional velocity. Backed by mechanical engineering rigor, strict TypeScript typing, runtime Zod validation, Supabase Row-Level Security (RLS), and automated integration suites. B.E. graduate from the University of Mumbai (Anabin H+ accredited, eligible for German Chancenkarte / EU Blue Card and global visa sponsorship).
       </p>
     </section>
 
-    <!-- CORE TECHNICAL SKILLS -->
+    <!-- CORE TECHNICAL ARSENAL -->
     <section>
-      <h2>Technical Arsenal & Agentic Tooling</h2>
+      <h2>Technical Skills & Specialized Arsenal</h2>
       <div class="skills-grid">
-        <div class="skill-cat">Vibe Coding / Agents:</div>
-        <div class="skill-list">Agentic Prompt Choreography, Cursor AI, Claude 3.5 Sonnet, Antigravity, OpenCode Gateway, MCP (Model Context Protocol)</div>
-        <div class="skill-cat">Frontend & Full-Stack:</div>
-        <div class="skill-list">Next.js 15 (App Router, Server Components), React 19, TypeScript 5.6, Tailwind CSS 3.4, Framer Motion</div>
+        <div class="skill-cat">AI, GenAI & Agents:</div>
+        <div class="skill-list">Generative AI & LLM Integration (OpenAI API, Claude 3.5 Sonnet), Agentic Workflows, LangChain, LlamaIndex, Model Context Protocol (MCP), Prompt Engineering, Fine-Tuning, NLP</div>
+        <div class="skill-cat">Vibe Coding / Velocity:</div>
+        <div class="skill-list">Agentic Prompt Choreography, Cursor AI, Claude 3.5 Sonnet, Antigravity, OpenCode Gateway, Fast Autonomous Loops</div>
+        <div class="skill-cat">Full-Stack & Frontend:</div>
+        <div class="skill-list">Next.js 15 (App Router, Server Components), React 19, TypeScript 5.6, JavaScript (ES6+), Tailwind CSS 3.4, Framer Motion, HTML5, CSS3</div>
         <div class="skill-cat">Backend & Databases:</div>
-        <div class="skill-list">Supabase (PostgreSQL, Multi-Tenant RLS Policies), FastAPI, RESTful APIs, Node.js, Zod Runtime Validation</div>
-        <div class="skill-cat">DevOps & Verification:</div>
-        <div class="skill-list">Vercel Edge Deployment, Git/GitHub, Automated Integration Test Suites, Docker, Performance Profiling</div>
-        <div class="skill-cat">Data Science & AI/ML:</div>
-        <div class="skill-list">Python (Pandas, NumPy, scikit-learn), Exploratory Data Analysis, Power BI Dashboards, SQL Analytics</div>
+        <div class="skill-list">Supabase (PostgreSQL, Multi-Tenant RLS Policies), FastAPI, Node.js, Express, RESTful APIs, Zod Runtime Validation, Redis</div>
+        <div class="skill-cat">Data Science & ML:</div>
+        <div class="skill-list">Python (Pandas, NumPy, scikit-learn), Data Preprocessing, Feature Engineering, Model Evaluation, Exploratory Data Analysis (EDA)</div>
+        <div class="skill-cat">Data Analysis & Viz:</div>
+        <div class="skill-list">Power BI (Interactive KPI Dashboards), Tableau, Microsoft Excel, Matplotlib, Seaborn, SQL (PostgreSQL, MySQL)</div>
+        <div class="skill-cat">DevOps & Cloud Tools:</div>
+        <div class="skill-list">Vercel Edge Deployment, Cloudflare Pages & Workers, Git & GitHub, Docker, Automated Integration Test Suites, n8n Automation</div>
       </div>
     </section>
 
-    <!-- FEATURED PRODUCTION PROJECTS -->
+    <!-- FEATURED PROJECTS -->
     <section>
       <h2>Featured Production Projects</h2>
+
       <div class="item">
         <div class="item-header">
           <span class="item-title">LaunchPilot AI — Autonomous Full-Stack Architecture & Code Synthesis Engine</span>
@@ -343,85 +354,170 @@
           Code: <a href="https://github.com/ShreeyashK99/launchpilot-ai" target="_blank">github.com/ShreeyashK99/launchpilot-ai</a>
         </div>
         <ul>
-          <li><strong>Architecture & Build:</strong> Built and shipped a production Next.js 15 full-stack application using agentic vibe coding that turns high-level specs into production-grade Next.js App Routes, Zod schemas, and Supabase PostgreSQL RLS migrations in &lt;250ms.</li>
-          <li><strong>Dual-Mode Synthesis:</strong> Engineered an autonomous inference pipeline with OpenCode API gateway integration and a zero-dependency local semantic synthesis engine for resilient offline code generation.</li>
-          <li><strong>Enterprise Verification:</strong> Engineered an automated 12/12 integration test suite validating edge execution, schema syntax, and multi-tenant security guardrails prior to continuous deployment on Vercel.</li>
+          <li><strong>Architecture & Build:</strong> Built and shipped a production Next.js 15 full-stack application using agentic vibe coding that turns high-level specs into production Next.js App Routes, Zod schemas, and Supabase PostgreSQL RLS migrations in &lt;250ms.</li>
+          <li><strong>Dual-Mode Engine:</strong> Engineered an autonomous inference pipeline with OpenCode API gateway integration and a local semantic synthesis engine for resilient zero-cost offline code generation.</li>
+          <li><strong>Enterprise Verification:</strong> Built an automated 12/12 integration test suite validating edge execution, schema syntax, and multi-tenant security guardrails prior to continuous deployment on Vercel.</li>
         </ul>
       </div>
 
-      <div class="item" style="margin-top: 5px;">
+      <div class="item">
         <div class="item-header">
-          <span class="item-title">Hamari AI & Autonomous Multi-Agent Service</span>
-          <span class="item-meta">Oct 2023 – Apr 2024</span>
+          <span class="item-title">Generative AI ChatBot & Hamari AI Platform</span>
+          <span class="item-meta">08/2025 – 10/2025</span>
         </div>
         <ul>
-          <li>Co-developed intelligent platform integrating speech-to-text, NLP chat completions, and automated document synthesis.</li>
-          <li>Engineered streaming API endpoints in FastAPI/Node.js paired with responsive client interfaces in React and stateful pipelines.</li>
+          <li>Contributed to development of an AI-based platform integrating multiple AI tools, assisting in API integration and AI feature implementation.</li>
+          <li>Engineered prompt structuring and application workflows; integrated AI APIs for chat, speech-to-text, and automated document synthesis.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Customer Behavior & Healthcare Data Analysis (EDA)</span>
+          <span class="item-meta">08/2025 – 10/2025</span>
+        </div>
+        <ul>
+          <li>Performed in-depth Exploratory Data Analysis (EDA) using SQL and Python to identify trends and patterns across customer and healthcare datasets.</li>
+          <li>Cleaned and structured complex raw data to improve analytics accuracy and generated actionable insights for operational decision-making.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Employee Attrition Dashboard (Power BI)</span>
+          <span class="item-meta">08/2025 – 10/2025</span>
+        </div>
+        <ul>
+          <li>Built interactive Power BI dashboards to analyze employee resignation trends and identified key factors influencing organizational attrition.</li>
+          <li>Designed dynamic KPI-based reports for executive workforce monitoring and proactive retention planning.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Machine Learning Classification Model</span>
+          <span class="item-meta">08/2025 – 10/2025</span>
+        </div>
+        <ul>
+          <li>Developed predictive classification models using Python and scikit-learn to solve multi-class categorization problems.</li>
+          <li>Performed end-to-end feature engineering, data preprocessing, and model performance evaluation to maximize prediction accuracy.</li>
         </ul>
       </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
+    <!-- PROFESSIONAL WORK EXPERIENCE -->
     <section>
-      <h2>Professional Experience</h2>
+      <h2>Professional Work Experience</h2>
 
       <div class="item">
         <div class="item-header">
           <span class="item-title">Hey Concrete</span>
-          <span class="item-meta">May 2026 – Jul 2026 | Mumbai, India</span>
+          <span class="item-meta">05/2026 – 07/2026 | Mumbai, India</span>
         </div>
-        <div class="item-sub">Technical Executive (AI & Automation)</div>
+        <div class="item-sub">Technical Executive</div>
         <ul>
-          <li>Architected an autonomous AI Complaint Management System using LLM tool-calling, slashing support ticket turnaround by 45%.</li>
-          <li>Choreographed multi-modal AI agents across operations and marketing via the unified HeyOne.Ai dashboard, automating 30% of repetitive workflows.</li>
-          <li>Implemented verification guardrails and output parsers to eliminate hallucinations across internal operational logs.</li>
+          <li>Supported AI tool implementation across HR, Accounts, Sales, Social Media, Graphics, and Content departments.</li>
+          <li>Assisted in development and testing of an autonomous AI Complaint Management System using LLM tool-calling, slashing support ticket turnaround by 45%.</li>
+          <li>Contributed to the **HeyOne.Ai** unified platform to integrate AI tools for employee productivity and operational workflow automation.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-header">
           <span class="item-title">Access Million</span>
-          <span class="item-meta">Apr 2025 – Oct 2025 | Mumbai, India</span>
+          <span class="item-meta">04/2025 – 10/2025 | Mumbai, India</span>
         </div>
-        <div class="item-sub">Data Analyst & Automation Intern</div>
+        <div class="item-sub">Data Analyst Intern</div>
         <ul>
-          <li>Constructed end-to-end data transformation pipelines utilizing SQL and Python (Pandas), processing 100K+ transaction records.</li>
-          <li>Designed interactive Power BI KPI dashboards, accelerating executive leadership decision-making cycles by 25%.</li>
+          <li>Analyzed business and customer data using SQL, Excel, and Python (Pandas/NumPy), cleaning and transforming datasets to improve reporting accuracy.</li>
+          <li>Built interactive Power BI dashboards to track business KPIs and performance trends; delivered actionable insights to support data-driven decision-making.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Codeshastra Pvt Ltd</span>
+          <span class="item-meta">10/2023 – 04/2024 | Mumbai, India</span>
+        </div>
+        <div class="item-sub">Full Stack Developer Intern</div>
+        <ul>
+          <li>Contributed to the development of **"Hamari AI"**, an intelligent AI tools platform.</li>
+          <li>Integrated AI APIs for chat, speech-to-text, and automation features; built responsive UI in React and supported backend server logic.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Unikaksha Pvt Ltd</span>
+          <span class="item-meta">05/2023 – 10/2023 | Mumbai, India</span>
+        </div>
+        <div class="item-sub">Trainee – Full Stack Development</div>
+        <ul>
+          <li>Completed intensive structured training in full-stack frontend and backend technologies.</li>
+          <li>Developed full-stack web applications and integrated RESTful APIs with client-side user interfaces.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-header">
           <span class="item-title">Bhagyesh Engineering Works</span>
-          <span class="item-meta">Sep 2021 – Apr 2023 | Maharashtra, India</span>
+          <span class="item-meta">09/2021 – 04/2023 | Maharashtra, India</span>
         </div>
-        <div class="item-sub">Production & Systems Engineer</div>
+        <div class="item-sub">Production Engineer</div>
         <ul>
-          <li>Applied Statistical Process Control (SPC) and quantitative root-cause analysis, reducing manufacturing defect rates by 18%.</li>
-          <li>Led workflow optimization across precision assembly schedules, applying data-driven throughput modeling.</li>
+          <li>Improved manufacturing efficiency and cut defect rates by 18% using data-driven root-cause analysis and Statistical Process Control (SPC).</li>
+          <li>Coordinated quality control inspection protocols, assembly line scheduling, and cross-functional production planning.</li>
         </ul>
       </div>
     </section>
 
-    <!-- EDUCATION & LEGAL ACCREDITATION -->
+    <!-- EDUCATION & CERTIFICATIONS -->
     <section>
-      <h2>Education & International Legal Recognition</h2>
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">Bachelor of Engineering (B.E.) in Mechanical Engineering</span>
-          <span class="item-meta">Graduated 2021</span>
+      <h2>Education & Formal Qualifications</h2>
+      <div class="edu-grid">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Master’s in Data Science, Data Analytics with GenAI</span>
+            <span class="item-meta">04/2025 – 10/2025</span>
+          </div>
+          <div class="item-sub">TOPMENTOR</div>
+          <div style="font-size: 11.5px; color: var(--muted);">Advanced specialization in Generative AI, LLM systems, Machine Learning, and Big Data Analytics.</div>
         </div>
-        <div class="item-sub">University of Mumbai | CGPA: 7.86 (First Class with Distinction)</div>
-        <div class="project-links" style="margin-top: 1px;">
-          * Recognized as <strong>H+ on German Anabin Database</strong> (Fully recognized equivalent for German Chancenkarte / EU Blue Card without points deficiency).
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Bachelor’s in Mechanical Engineering (B.E.)</span>
+            <span class="item-meta">06/2018 – 08/2021</span>
+          </div>
+          <div class="item-sub">University of Mumbai | CGPA: 7.86 (First Class)</div>
+          <div style="font-size: 11.5px; color: var(--accent); font-weight: 600;">* German Anabin Database: H+ Fully Recognized (EU Blue Card / Chancenkarte eligible).</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Diploma in Mechanical Engineering</span>
+            <span class="item-meta">06/2015 – 06/2018</span>
+          </div>
+          <div class="item-sub">Maharashtra State Board of Technical Education (MSBTE) | 75.00%</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Secondary School Certificate (SSC)</span>
+            <span class="item-meta">06/2014 – 05/2015</span>
+          </div>
+          <div class="item-sub">Maharashtra State Board | 88.20% (Distinction)</div>
         </div>
       </div>
-      <div class="item" style="margin-top: 3px;">
-        <div class="item-header">
-          <span class="item-title">Advanced Certification in Data Science & Generative AI</span>
-          <span class="item-meta">2025</span>
-        </div>
-        <div class="item-sub">Topmentor</div>
+    </section>
+
+    <!-- SPOKEN LANGUAGES -->
+    <section>
+      <h2>Languages</h2>
+      <div class="lang-bar">
+        <strong>English</strong> (Professional Working Proficiency) &nbsp;•&nbsp; 
+        <strong>Hindi</strong> (Native / Bilingual) &nbsp;•&nbsp; 
+        <strong>Marathi</strong> (Native / Bilingual)
       </div>
     </section>
 
