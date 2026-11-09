@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreeyash Kudalkar - AI-Native & Vibe Coding Full-Stack Engineer</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-subtle: #eff6ff;
+      --text: #1e293b;
+      --muted: #475569;
+      --line: #cbd5e1;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background-color: #f8fafc;
+      line-height: 1.45;
+      font-size: 13.5px;
+      padding: 30px 15px;
+    }
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 42px 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 26px;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    .title-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .role-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .badge-vibe {
+      display: inline-block;
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .contact-bar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 800;
+      color: var(--primary);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+    .summary-text {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item:last-child {
+      margin-bottom: 0;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13.5px;
+    }
+    .item-title {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .item-meta {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .item-sub {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+    ul {
+      margin-left: 18px;
+      margin-top: 3px;
+    }
+    li {
+      margin-bottom: 3px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    li strong {
+      color: var(--primary);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 6px;
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+    .skill-cat {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .skill-list {
+      color: var(--text);
+    }
+    .project-links {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Print Optimization for Exact 1 Page */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 11.5px;
+        line-height: 1.35;
+      }
+      .page-container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      header {
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .role-title {
+        font-size: 13px;
+      }
+      section {
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 11px;
+        margin-bottom: 5px;
+        padding-bottom: 2px;
+      }
+      .summary-text {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+      .item-header {
+        font-size: 11.5px;
+      }
+      .item-sub {
+        font-size: 11px;
+      }
+      li {
+        font-size: 11px;
+        margin-bottom: 2px;
+        line-height: 1.3;
+      }
+      .skills-grid {
+        grid-template-columns: 130px 1fr;
+        font-size: 11px;
+        row-gap: 4px;
+      }
+      .contact-bar {
+        font-size: 10.5px;
+        gap: 8px 12px;
+        margin-top: 6px;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .print-banner {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="print-banner no-print">
+      <span>📄 <strong>ATS Single-Page Resume</strong> (Engineered for European & International Visa Screening)</span>
+      <button class="btn-print" onclick="window.print()">Print / Save as PDF (Ctrl + P)</button>
+    </div>
+
+    <header>
+      <h1>Shreeyash Kudalkar</h1>
+      <div class="title-banner">
+        <span class="role-title">AI-Native & Vibe Coding Full-Stack Engineer</span>
+        <span class="badge-vibe">100% Vibe Coded & Agentic Velocity</span>
+      </div>
+      <div class="contact-bar">
+        <span>📍 Mumbai, India (Global Relocation Ready)</span>
+        <span>📞 +91 7715831281</span>
+        <span>✉️ <a href="mailto:shreeyashkudalkar4136@gmail.com">shreeyashkudalkar4136@gmail.com</a></span>
+        <span>🌐 <a href="https://shreeyash-kudalkar-portfolio.pages.dev/" target="_blank">Portfolio</a></span>
+        <span>💻 <a href="https://github.com/ShreeyashK99" target="_blank">GitHub (@ShreeyashK99)</a></span>
+        <span>🚀 <a href="https://launchpilot-ai-chi.vercel.app/" target="_blank">Live Production App</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2>Professional Summary & Engineering Philosophy</h2>
+      <p class="summary-text">
+        <strong>Pioneering the AI-Native / Vibe Coding development paradigm.</strong> Rather than typing repetitive boilerplate line-by-line, I operate as an engineering conductor—orchestrating autonomous AI coding agents (Claude 3.5 Sonnet, Cursor, Antigravity) to rapidly synthesize, test, and ship full-stack web applications and microservices at 5–10x traditional development velocity. Backed by formal engineering rigor, rigorous Zod validation, Supabase Row-Level Security (RLS), and automated integration suites. B.E. graduate from the University of Mumbai (Anabin H+ accredited, Germany Chancenkarte eligible).
+      </p>
+    </section>
+
+    <!-- CORE TECHNICAL SKILLS -->
+    <section>
+      <h2>Technical Skills & Agentic Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">Vibe Coding / Agents:</div>
+        <div class="skill-list">Agentic Prompt Choreography, Cursor AI, Claude 3.5 Sonnet, Antigravity, OpenCode Gateway, Autonomous Loops</div>
+        <div class="skill-cat">Frontend & Full-Stack:</div>
+        <div class="skill-list">Next.js 15 (App Router, Server Components), React 19, TypeScript 5.6, Tailwind CSS 3.4, Framer Motion</div>
+        <div class="skill-cat">Backend & Databases:</div>
+        <div class="skill-list">Supabase (PostgreSQL, Multi-Tenant RLS Policies), FastAPI, RESTful APIs, Node.js, Zod Runtime Validation</div>
+        <div class="skill-cat">DevOps & Verification:</div>
+        <div class="skill-list">Vercel Edge Deployment, Git/GitHub, Automated Integration Test Suites, Docker, Performance Profiling</div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP DEPLOYED MVP -->
+    <section>
+      <h2>Flagship Production Project</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">LaunchPilot AI — Autonomous Full-Stack Architecture & Code Synthesis Engine</span>
+          <span class="item-meta">Oct 2026 – Present</span>
+        </div>
+        <div class="project-links">
+          Demo: <a href="https://launchpilot-ai-chi.vercel.app/" target="_blank">launchpilot-ai-chi.vercel.app</a> | 
+          Code: <a href="https://github.com/ShreeyashK99/launchpilot-ai" target="_blank">github.com/ShreeyashK99/launchpilot-ai</a>
+        </div>
+        <ul>
+          <li><strong>Architecture & Build:</strong> Built and shipped a production Next.js 15 full-stack application using agentic vibe coding that turns high-level specs into production-grade Next.js App Routes, Zod validation schemas, and Supabase PostgreSQL RLS migrations in &lt;250ms.</li>
+          <li><strong>Dual-Mode Synthesis:</strong> Engineered an autonomous inference pipeline with OpenCode API integration and a zero-dependency local semantic synthesis engine for resilient zero-cost offline code generation.</li>
+          <li><strong>Enterprise Verification:</strong> Built an automated 12/12 integration test suite validating edge execution, schema syntax, and multi-tenant security guardrails prior to continuous deployment on Vercel.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Hey Concrete</span>
+          <span class="item-meta">May 2026 – Jul 2026 | Mumbai, India</span>
+        </div>
+        <div class="item-sub">Technical Executive (AI & Automation)</div>
+        <ul>
+          <li>Architected an autonomous AI Complaint Management System utilizing LLM tool-calling, slashing customer support ticket resolution turnaround by 45%.</li>
+          <li>Choreographed multi-modal AI agents across operations and marketing via the unified HeyOne.Ai dashboard, automating 30% of repetitive workflows.</li>
+          <li>Implemented verification guardrails and output parsers to eliminate hallucinations across internal operational logs.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Access Million</span>
+          <span class="item-meta">Apr 2025 – Oct 2025 | Mumbai, India</span>
+        </div>
+        <div class="item-sub">Data Analyst Intern</div>
+        <ul>
+          <li>Constructed end-to-end data transformation pipelines utilizing SQL and Python (Pandas), processing 100K+ transaction records with zero data drift.</li>
+          <li>Designed interactive Power BI KPI dashboards, accelerating executive leadership decision-making cycles by 25%.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Codeshastra Pvt Ltd</span>
+          <span class="item-meta">Oct 2023 – Apr 2024 | Mumbai, India</span>
+        </div>
+        <div class="item-sub">Full Stack & AI Developer Intern</div>
+        <ul>
+          <li>Engineered core modules of "Hamari AI", integrating speech-to-text, NLP chat completions, and automated document synthesis.</li>
+          <li>Developed high-concurrency RESTful API endpoints in Node.js/FastAPI paired with responsive React frontends.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Bhagyesh Engineering Works</span>
+          <span class="item-meta">Sep 2021 – Apr 2023 | Maharashtra, India</span>
+        </div>
+        <div class="item-sub">Production Engineer</div>
+        <ul>
+          <li>Applied Statistical Process Control (SPC) and quantitative root-cause analysis, reducing manufacturing defect rates by 18%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section>
+      <h2>Education & Formal Recognition</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Bachelor of Engineering (B.E.) in Mechanical Engineering</span>
+          <span class="item-meta">Graduated 2021</span>
+        </div>
+        <div class="item-sub">University of Mumbai | CGPA: 7.86 (First Class with Distinction)</div>
+        <div class="project-links" style="margin-top: 1px;">
+          * Recognized as H+ on German Anabin Database (Fully recognized equivalent for German Chancenkarte / EU Blue Card without points deficiency).
+        </div>
+      </div>
+      <div class="item" style="margin-top: 4px;">
+        <div class="item-header">
+          <span class="item-title">Advanced Certification in Data Science & Generative AI</span>
+          <span class="item-meta">2025</span>
+        </div>
+        <div class="item-sub">Topmentor</div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
