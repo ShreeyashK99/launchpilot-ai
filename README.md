@@ -54,7 +54,7 @@ This project was built from the ground up embracing the modern **"Vibe Coding" a
   - Supabase PostgreSQL migrations with relational foreign keys and Row-Level Security (`auth.uid()` policies).
   - Runtime request validation powered by Zod.
 - **One-Click Spec Export**: Export generated Next.js routes and Supabase SQL migrations directly to your local workspace.
-- **Lighthouse 100/100 Benchmark**: Fully accessible, mobile-first responsive interface styled with Tailwind CSS and Framer Motion.
+- **Automated Integration Testing**: Verified with a 12-case `test-suite.mjs` check covering HTTP validation, all 5 domain mappings, Zod/Edge generation assertions, page routes, and API latency.
 
 ---
 
@@ -96,8 +96,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 👨‍💻 Author
 
-**Shreeyash Kudalkar**  
-*AI & Full-Stack Systems Engineer*  
-- Portfolio: [Developer Portfolio](https://shreeyash-kudalkar-portfolio.pages.dev/)  
+**Shreeyash Pradeep Kudalkar**  
+*AI-Native Full-Stack & Data Systems Engineer (100% Vibe Coding & Agentic Development)*  
+- Portfolio: [shreeyash-kudalkar-portfolio.pages.dev](https://shreeyash-kudalkar-portfolio.pages.dev/)  
+- Live App: [launchpilot-ai-chi.vercel.app](https://launchpilot-ai-chi.vercel.app/)  
 - GitHub: [@ShreeyashK99](https://github.com/ShreeyashK99)  
-- LinkedIn: [linkedin.com/in/shreeyashkudalkar](https://linkedin.com)
+- Email: `shreeyashkudalkar4136@gmail.com`
