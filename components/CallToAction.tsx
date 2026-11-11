@@ -29,7 +29,7 @@ export function CallToAction() {
 
   const onSubmit = async (data: CTAFormData) => {
     try {
-      await fetch("https://formsubmit.co/ajax/shreeyashkudalkar7@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/shreeyashkudalkar4136@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

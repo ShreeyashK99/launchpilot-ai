@@ -374,7 +374,7 @@ CREATE INDEX IF NOT EXISTS idx_sales_leads_created_at ON sales_leads(created_at 
                 <p className="text-xs text-stone-500 mt-0.5">{tagline}</p>
               </div>
               <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
-                100/100 Benchmark
+                12/12 Checks Pass
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 font-mono">

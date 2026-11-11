@@ -68,7 +68,7 @@ export default function PrivacyPage() {
 
         <div className="pt-6 border-t border-slate-200 text-center">
           <p className="text-xs font-mono text-slate-500">
-            Questions regarding our privacy policy? Contact us at <strong>shreeyashkudalkar7@gmail.com</strong>
+            Questions regarding our privacy policy? Contact us at <strong>shreeyashkudalkar4136@gmail.com</strong>
           </p>
         </div>
       </main>
